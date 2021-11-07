@@ -5,4 +5,3 @@ config BR2_PACKAGE_PHONIEBOX
 
 	  https://rpi-jukebox-rfid.readthedocs.io/en/latest/index.html
 	  https://github.com/net-attack/RPi-Jukebox-RFID-buildroot-package
-
