@@ -2,7 +2,7 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	root /opt/webapp/build;
+	root /opt/webapp/build/build;
 
 	index index.html index.htm;
 

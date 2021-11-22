@@ -25,10 +25,8 @@ endif
 
 ifeq ($(BR2_PACKAGE_RPI_PHONIEBOX_WEBAPP),y)
 define RPI_PHONIEBOX_INSTALL_TARGET_CMDS
-	mkdir -p $(TARGET_DIR)/opt/webapp/build
-	cp -r $(@D)/src/webapp/build $(TARGET_DIR)/opt/webapp/build;
-	mkdir -p $(TARGET_DIR)/etc/nginx/sites-available
-	cp -f ${@D}/resources/default-settings/nginx.default $(TARGET_DIR)/etc/nginx/sites-available/default
+	rm $(TARGET_DIR)/usr/html/*
+	cp -r $(@D)/src/webapp/build/* $(TARGET_DIR)/usr/html/;
 endef
 endif
 
