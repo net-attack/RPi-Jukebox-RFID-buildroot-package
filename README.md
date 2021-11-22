@@ -24,6 +24,8 @@ But because of easy update possibility we try again to create a small buildroot 
       source "package/rpi-phoniebox/Config.in"
    endmenu
    ```
+   Ensure to have a empty newline in the config files. 
+   This lead to errors while running make menuconfig
 1. Run `make menuconfig` and select `Phoniebox` 
 1. Run `make`
 
