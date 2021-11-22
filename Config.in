@@ -1,7 +1,16 @@
-config BR2_PACKAGE_PHONIEBOX
-	bool "Phoniebox"
+config BR2_PACKAGE_RPI_PHONIEBOX
+	depends on BR2_PACKAGE_NODEJS
+	bool "rpi-phoniebox"
 	help
 	  Implementation of the Phonibox/Jukebox from github.
 
 	  https://rpi-jukebox-rfid.readthedocs.io/en/latest/index.html
 	  https://github.com/net-attack/RPi-Jukebox-RFID-buildroot-package
+
+if BR2_PACKAGE_RPI_PHONIEBOX
+
+config BR2_PACKAGE_RPI_PHONIEBOX_WEBAPP
+	bool "rpi-phoniebox-webapp"
+	default y
+
+endif
