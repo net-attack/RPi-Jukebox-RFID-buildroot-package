@@ -10,6 +10,7 @@ config BR2_PACKAGE_RPI_PHONIEBOX
 if BR2_PACKAGE_RPI_PHONIEBOX
 
 config BR2_PACKAGE_RPI_PHONIEBOX_WEBAPP
+	depends on BR2_PACKAGE_WPA_SUPPLICANT
 	bool "rpi-phoniebox-webapp"
 	default y
 

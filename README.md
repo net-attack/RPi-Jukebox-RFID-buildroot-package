@@ -14,6 +14,26 @@ But because of easy update possibility we try again to create a small buildroot 
    ```
    make raspberrypi0w_defconfig
    ```
+1. Add your config for raspberrypi
+
+    ```Enable Compiler Cache in Build Options```
+
+    ```Enable WCHAR in Toolchain```
+
+    ```Enable NODEJS in Target Packages Interpreters```
+
+    ```Hardware Handling -> Firmware -> rpi-wifi-firmware```
+
+   ```Networking applications -> wpa_supplicant```
+   
+   ```Networking applications -> wpa_supplicant - Enable 80211 support```
+   
+   ```Networking applications -> dropbear```
+   
+   ```Networking applications -> openssh```
+   
+
+
 1. Clone this repo inside the package folder of buildroot
    ```
    git clone https://github.com/net-attack/RPi-Jukebox-RFID-buildroot-package.git rpi-phoniebox
